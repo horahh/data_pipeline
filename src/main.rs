@@ -16,10 +16,12 @@ fn is_not_dir(entry: &DirEntry) -> bool {
 }
 
 fn process_parquet(filename: String ) -> PolarsResult<()> {
+    let col_selection=["category","fats_g","sugars_g"];
     let df = LazyFrame::scan_parquet(filename, ScanArgsParquet::default())?
         .select([
             // select all columns
-            all(),
+            //all(),
+            cols(col_selection),
             // and do some aggregations
             cols(["fats_g", "sugars_g"]).sum().suffix("_summed"),
         ])
