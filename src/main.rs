@@ -19,7 +19,7 @@ fn is_not_dir(entry: &DirEntry) -> bool {
         .is_dir()
 }
 
-fn process_parquet(filename: String ) -> PolarsResult<DataFrame> {
+fn process_parquet(filename: String ) -> PolarsResult<LazyFrame> {
     let col_selection=["category","fats_g","sugars_g","filename"];
     let df = LazyFrame::scan_parquet(filename.clone(), ScanArgsParquet::default())?
         //.with_columns(filename)
@@ -33,8 +33,7 @@ fn process_parquet(filename: String ) -> PolarsResult<DataFrame> {
             //(cols(["category"]).replace(r"*",&filename_c).alias("category_new")),
             concat_str([col("category"),col("category")],&filename).alias("concat2"),
            // fold_exprs(filename_c,|acc,x| Ok(Some(format!("{}",filename_c))),[col("category")]).alias("example"),
-        ])
-        .collect()?;
+        ]);
     //dbg!(df.clone());
     Ok(df)
 }
@@ -50,10 +49,8 @@ fn main() {
         //.for_each(|x| process_parquet(x.path().display().to_string()).unwrap() );
         .parallel_map(|x| process_parquet(x.path().display().to_string()).unwrap()).collect::<Vec<_>>();
 
-    for df in df_vec {
-        dbg!(&df);
-    }
     let args: UnionArgs = UnionArgs{ parallel:true, rechunk:true, to_supertypes:true};
-    //let _final =concat(&df_vec, args);
+    let _final = concat(&df_vec, args);
+    dbg!(&_final.unwrap().collect());
 
 }
