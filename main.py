@@ -18,6 +18,7 @@ def main():
     path=".data"
     files = get_files(path)
     dfs = [ process_parquet(f) for f in files ]
+    print(dfs[0])
     final = pd.concat(dfs)
     print(final)
 

@@ -1,0 +1,47 @@
+ time python main.py
+      category  fats_g       sugars_g                filename  fats_g_summed  sugars_g_summed                                    concat_2
+0   vegetables     0.5  9.881313e-324  .data/foods624.parquet           86.5    4.594811e-322  vegetables.data/foods624.parquetvegetables
+1      seafood     5.0   0.000000e+00  .data/foods624.parquet           86.5    4.594811e-322        seafood.data/foods624.parquetseafood
+2         meat     5.0   0.000000e+00  .data/foods624.parquet           86.5    4.594811e-322              meat.data/foods624.parquetmeat
+3        fruit     0.0  5.434722e-323  .data/foods624.parquet           86.5    4.594811e-322            fruit.data/foods624.parquetfruit
+4      seafood     5.0  4.940656e-324  .data/foods624.parquet           86.5    4.594811e-322        seafood.data/foods624.parquetseafood
+5         meat    10.0  4.940656e-324  .data/foods624.parquet           86.5    4.594811e-322              meat.data/foods624.parquetmeat
+6   vegetables     0.0  9.881313e-324  .data/foods624.parquet           86.5    4.594811e-322  vegetables.data/foods624.parquetvegetables
+7        fruit     0.0  2.470328e-323  .data/foods624.parquet           86.5    4.594811e-322            fruit.data/foods624.parquetfruit
+8      seafood     5.0   0.000000e+00  .data/foods624.parquet           86.5    4.594811e-322        seafood.data/foods624.parquetseafood
+9        fruit     4.5   0.000000e+00  .data/foods624.parquet           86.5    4.594811e-322            fruit.data/foods624.parquetfruit
+10        meat     7.0   0.000000e+00  .data/foods624.parquet           86.5    4.594811e-322              meat.data/foods624.parquetmeat
+11  vegetables     0.0  9.881313e-324  .data/foods624.parquet           86.5    4.594811e-322  vegetables.data/foods624.parquetvegetables
+12       fruit     0.0  1.482197e-323  .data/foods624.parquet           86.5    4.594811e-322            fruit.data/foods624.parquetfruit
+13  vegetables     0.0  1.482197e-323  .data/foods624.parquet           86.5    4.594811e-322  vegetables.data/foods624.parquetvegetables
+14  vegetables     0.0  1.976263e-323  .data/foods624.parquet           86.5    4.594811e-322  vegetables.data/foods624.parquetvegetables
+15     seafood     5.0   0.000000e+00  .data/foods624.parquet           86.5    4.594811e-322        seafood.data/foods624.parquetseafood
+16     seafood    10.0   0.000000e+00  .data/foods624.parquet           86.5    4.594811e-322        seafood.data/foods624.parquetseafood
+17     seafood     7.0  9.881313e-324  .data/foods624.parquet           86.5    4.594811e-322        seafood.data/foods624.parquetseafood
+18       fruit     0.0  5.434722e-323  .data/foods624.parquet           86.5    4.594811e-322            fruit.data/foods624.parquetfruit
+19        meat     7.0   0.000000e+00  .data/foods624.parquet           86.5    4.594811e-322              meat.data/foods624.parquetmeat
+20  vegetables     0.0  1.482197e-323  .data/foods624.parquet           86.5    4.594811e-322  vegetables.data/foods624.parquetvegetables
+21     seafood     7.0  9.881313e-324  .data/foods624.parquet           86.5    4.594811e-322        seafood.data/foods624.parquetseafood
+22     seafood     1.5   0.000000e+00  .data/foods624.parquet           86.5    4.594811e-322        seafood.data/foods624.parquetseafood
+23       fruit     0.0  1.235164e-322  .data/foods624.parquet           86.5    4.594811e-322            fruit.data/foods624.parquetfruit
+24        meat     7.0   0.000000e+00  .data/foods624.parquet           86.5    4.594811e-322              meat.data/foods624.parquetmeat
+25  vegetables     0.0  2.470328e-323  .data/foods624.parquet           86.5    4.594811e-322  vegetables.data/foods624.parquetvegetables
+26       fruit     0.0  5.434722e-323  .data/foods624.parquet           86.5    4.594811e-322            fruit.data/foods624.parquetfruit
+      category  fats_g       sugars_g                filename  fats_g_summed  sugars_g_summed                                    concat_2
+0   vegetables     0.5  9.881313e-324  .data/foods624.parquet           86.5    4.594811e-322  vegetables.data/foods624.parquetvegetables
+1      seafood     5.0   0.000000e+00  .data/foods624.parquet           86.5    4.594811e-322        seafood.data/foods624.parquetseafood
+2         meat     5.0   0.000000e+00  .data/foods624.parquet           86.5    4.594811e-322              meat.data/foods624.parquetmeat
+3        fruit     0.0  5.434722e-323  .data/foods624.parquet           86.5    4.594811e-322            fruit.data/foods624.parquetfruit
+4      seafood     5.0  4.940656e-324  .data/foods624.parquet           86.5    4.594811e-322        seafood.data/foods624.parquetseafood
+..         ...     ...            ...                     ...            ...              ...                                         ...
+22     seafood     1.5   0.000000e+00  .data/foods600.parquet           86.5    4.594811e-322        seafood.data/foods600.parquetseafood
+23       fruit     0.0  1.235164e-322  .data/foods600.parquet           86.5    4.594811e-322            fruit.data/foods600.parquetfruit
+24        meat     7.0   0.000000e+00  .data/foods600.parquet           86.5    4.594811e-322              meat.data/foods600.parquetmeat
+25  vegetables     0.0  2.470328e-323  .data/foods600.parquet           86.5    4.594811e-322  vegetables.data/foods600.parquetvegetables
+26       fruit     0.0  5.434722e-323  .data/foods600.parquet           86.5    4.594811e-322            fruit.data/foods600.parquetfruit
+
+[21627 rows x 7 columns]
+
+real    0m2.179s
+user    0m2.314s
+sys     0m1.332s

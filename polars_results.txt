@@ -1,0 +1,39 @@
+hmhidalg@hmhidalg-mobl:~/src/rust/data_pipeline$ time ./target/release/data_pipeline
+[src/main.rs:53] df.collect().unwrap() = shape: (27, 7)
+┌────────────┬────────┬──────────┬────────────────────────┬───────────────┬─────────────────┬───────────────────────────────────┐
+│ category   ┆ fats_g ┆ sugars_g ┆ filename               ┆ fats_g_summed ┆ sugars_g_summed ┆ concat2                           │
+│ ---        ┆ ---    ┆ ---      ┆ ---                    ┆ ---           ┆ ---             ┆ ---                               │
+│ str        ┆ f64    ┆ i64      ┆ str                    ┆ f64           ┆ i64             ┆ str                               │
+╞════════════╪════════╪══════════╪════════════════════════╪═══════════════╪═════════════════╪═══════════════════════════════════╡
+│ vegetables ┆ 0.5    ┆ 2        ┆ .data/foods624.parquet ┆ 86.5          ┆ 93              ┆ vegetables.data/foods624.parquet… │
+│ seafood    ┆ 5.0    ┆ 0        ┆ .data/foods624.parquet ┆ 86.5          ┆ 93              ┆ seafood.data/foods624.parquetsea… │
+│ meat       ┆ 5.0    ┆ 0        ┆ .data/foods624.parquet ┆ 86.5          ┆ 93              ┆ meat.data/foods624.parquetmeat    │
+│ fruit      ┆ 0.0    ┆ 11       ┆ .data/foods624.parquet ┆ 86.5          ┆ 93              ┆ fruit.data/foods624.parquetfruit  │
+│ …          ┆ …      ┆ …        ┆ …                      ┆ …             ┆ …               ┆ …                                 │
+│ fruit      ┆ 0.0    ┆ 25       ┆ .data/foods624.parquet ┆ 86.5          ┆ 93              ┆ fruit.data/foods624.parquetfruit  │
+│ meat       ┆ 7.0    ┆ 0        ┆ .data/foods624.parquet ┆ 86.5          ┆ 93              ┆ meat.data/foods624.parquetmeat    │
+│ vegetables ┆ 0.0    ┆ 5        ┆ .data/foods624.parquet ┆ 86.5          ┆ 93              ┆ vegetables.data/foods624.parquet… │
+│ fruit      ┆ 0.0    ┆ 11       ┆ .data/foods624.parquet ┆ 86.5          ┆ 93              ┆ fruit.data/foods624.parquetfruit  │
+└────────────┴────────┴──────────┴────────────────────────┴───────────────┴─────────────────┴───────────────────────────────────┘
+[src/main.rs:59] &_final.unwrap().collect() = Ok(
+    shape: (21_627, 7)
+    ┌────────────┬────────┬──────────┬────────────────────────┬───────────────┬─────────────────┬───────────────────────────────────┐
+    │ category   ┆ fats_g ┆ sugars_g ┆ filename               ┆ fats_g_summed ┆ sugars_g_summed ┆ concat2                           │
+    │ ---        ┆ ---    ┆ ---      ┆ ---                    ┆ ---           ┆ ---             ┆ ---                               │
+    │ str        ┆ f64    ┆ i64      ┆ str                    ┆ f64           ┆ i64             ┆ str                               │
+    ╞════════════╪════════╪══════════╪════════════════════════╪═══════════════╪═════════════════╪═══════════════════════════════════╡
+    │ vegetables ┆ 0.5    ┆ 2        ┆ .data/foods624.parquet ┆ 86.5          ┆ 93              ┆ vegetables.data/foods624.parquet… │
+    │ seafood    ┆ 5.0    ┆ 0        ┆ .data/foods624.parquet ┆ 86.5          ┆ 93              ┆ seafood.data/foods624.parquetsea… │
+    │ meat       ┆ 5.0    ┆ 0        ┆ .data/foods624.parquet ┆ 86.5          ┆ 93              ┆ meat.data/foods624.parquetmeat    │
+    │ fruit      ┆ 0.0    ┆ 11       ┆ .data/foods624.parquet ┆ 86.5          ┆ 93              ┆ fruit.data/foods624.parquetfruit  │
+    │ …          ┆ …      ┆ …        ┆ …                      ┆ …             ┆ …               ┆ …                                 │
+    │ fruit      ┆ 0.0    ┆ 25       ┆ .data/foods600.parquet ┆ 86.5          ┆ 93              ┆ fruit.data/foods600.parquetfruit  │
+    │ meat       ┆ 7.0    ┆ 0        ┆ .data/foods600.parquet ┆ 86.5          ┆ 93              ┆ meat.data/foods600.parquetmeat    │
+    │ vegetables ┆ 0.0    ┆ 5        ┆ .data/foods600.parquet ┆ 86.5          ┆ 93              ┆ vegetables.data/foods600.parquet… │
+    │ fruit      ┆ 0.0    ┆ 11       ┆ .data/foods600.parquet ┆ 86.5          ┆ 93              ┆ fruit.data/foods600.parquetfruit  │
+    └────────────┴────────┴──────────┴────────────────────────┴───────────────┴─────────────────┴───────────────────────────────────┘,
+)
+
+real    0m0.160s
+user    0m0.191s
+sys     0m0.309s
