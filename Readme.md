@@ -21,7 +21,8 @@ Run Python equivalent project and collect results
 
 
 * RESULTS
-current results in intel 12th Gen i7 - 1270P - 16 threads
+
+Current results in intel 12th Gen i7 - 1270P - 16 threads.
 
 Python:
 
@@ -33,5 +34,7 @@ Rust:
 real  0m0.167s
 user  0m0.191s
 sys   0m0.278s
+
+* CONCLUSION
 
 Rust is about 14 times faster than python with these conditions
