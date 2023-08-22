@@ -7,6 +7,5 @@ edition = "2021"
 
 [dependencies]
 walkdir = "2"
-polars = { features = ["lazy", "parquet","concat_str"] }
 pariter = "0.5.1"
-
+polars = { version= "0.32.1", features = ["lazy", "parquet","concat_str"] }

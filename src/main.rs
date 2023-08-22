@@ -1,6 +1,6 @@
 use walkdir::{DirEntry, WalkDir};
 use polars::prelude::*;
-use std::collections::HashMap;
+//use std::collections::HashMap;
 //use rayon::Scope;
 
 use pariter::IteratorExt;
@@ -49,8 +49,12 @@ fn main() {
         //.for_each(|x| process_parquet(x.path().display().to_string()).unwrap() );
         .parallel_map(|x| process_parquet(x.path().display().to_string()).unwrap()).collect::<Vec<_>>();
 
+    for df in df_vec.clone() {
+        dbg!( df.collect().unwrap());
+        break;
+    }
+
     let args: UnionArgs = UnionArgs{ parallel:true, rechunk:true, to_supertypes:true};
     let _final = concat(&df_vec, args);
     dbg!(&_final.unwrap().collect());
-
 }
