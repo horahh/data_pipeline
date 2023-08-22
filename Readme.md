@@ -21,7 +21,7 @@ Run Python equivalent project and collect results
 
 
 * RESULTS
-current results in intel 12th Gen i7 - 1270P
+current results in intel 12th Gen i7 - 1270P - 16 threads
 
 Python:
 
