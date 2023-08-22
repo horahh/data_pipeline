@@ -1,9 +1,9 @@
-* DATA PIPELINE INTRO
+# DATA PIPELINE INTRO
 
 The purpose of this repository is to experiment with Rust parallelization for data analysis mainly 
 using Polars Library and compare againt python pandas doing somewhat of a benchmark.
 
-* SETUP
+# SETUP
 
 Data comes from a file in data/foods.parquet which comes from the an example data from polars library.
 
@@ -20,7 +20,7 @@ Run Python equivalent project and collect results
 3) python main.py
 
 
-* RESULTS
+# RESULTS
 
 Current results in intel 12th Gen i7 - 1270P - 16 threads.
 
@@ -35,6 +35,6 @@ real  0m0.167s
 user  0m0.191s
 sys   0m0.278s
 
-* CONCLUSION
+# CONCLUSION
 
 Rust is about 14 times faster than python with these conditions
